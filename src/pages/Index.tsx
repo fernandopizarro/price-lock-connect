@@ -2,6 +2,7 @@
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import FeaturedListings from "@/components/FeaturedListings";
+import PaymentComparison from "@/components/PaymentComparison";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 
@@ -61,6 +62,9 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Payment Comparison Section */}
+      <PaymentComparison />
+      
       {/* Featured Listings Section */}
       <FeaturedListings />
       
@@ -84,7 +88,7 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Protect against future price increases and inflation</p>
+                  <p className="text-gray-600">Protect against future price increases, tariffs, and inflation</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -92,7 +96,7 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Secure deals on products and services you know you'll need</p>
+                  <p className="text-gray-600">Secure deals on essential food items and products you know you'll need</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -100,7 +104,7 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Spread out large purchases by securing prices in advance</p>
+                  <p className="text-gray-600">Budget more effectively by locking in current prices for essential consumables</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -138,7 +142,7 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Attract new customers seeking price certainty</p>
+                  <p className="text-gray-600">Attract new customers seeking price certainty in volatile markets</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -160,7 +164,7 @@ const Index = () => {
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Start Saving?</h2>
             <p className="max-w-xl mx-auto mb-8">
-              Join thousands of savvy shoppers and sellers who are already benefiting from price guarantees.
+              Join thousands of savvy shoppers and sellers who are already benefiting from price guarantees on essential consumables.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <Button size="lg" variant="default" className="bg-white text-pricelock-purple hover:bg-gray-100">

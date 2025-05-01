@@ -11,9 +11,13 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Lock in Today's Prices, <span className="text-pricelock-purple">Secure Tomorrow's Value</span>
             </h1>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-600 mb-4">
               PriceLock connects savvy shoppers with sellers offering price guarantees on future purchases. 
-              Protect yourself from inflation and price increases while sellers gain predictable future sales.
+              Protect yourself from inflation, tariffs, and price increases while sellers gain predictable future sales.
+            </p>
+            <p className="text-md text-gray-600 mb-8">
+              <span className="font-semibold">Avoid upcoming tariffs</span> on imported goods by securing current prices 
+              for future delivery of eggs, meats, produce, and other essentials.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/listings">
@@ -28,8 +32,8 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-64 h-64 bg-pricelock-purple opacity-20 rounded-full"></div>
               <img 
-                src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
-                alt="Person reviewing prices on a laptop" 
+                src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d" 
+                alt="Fresh groceries and consumer goods" 
                 className="w-full max-w-md rounded-xl shadow-lg relative z-10"
               />
               <div className="absolute bottom-12 -right-8 p-4 bg-white rounded-lg shadow-lg z-20">

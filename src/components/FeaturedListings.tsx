@@ -2,86 +2,87 @@
 import { useState } from "react";
 import ListingCard, { Listing } from "./ListingCard";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
-// Mock data for featured listings
+// Mock data for featured listings - focused on consumer consumables
 const mockListings: Listing[] = [
   {
     id: "1",
-    title: "Annual Gym Membership",
-    description: "Lock in this year's membership rate for next year. Beat the January price increase!",
+    title: "Premium Organic Beef - 6 Month Supply",
+    description: "Lock in current beef prices before expected tariff increases. Grass-fed, hormone-free beef delivered quarterly.",
     currentPrice: 599.99,
-    guaranteedPrice: 499.99,
+    guaranteedPrice: 479.99,
     expiryDate: "2025-12-31",
-    category: "Services",
-    sellerName: "FitLife Gym",
+    category: "Meat & Poultry",
+    sellerName: "Greenfield Farms",
     sellerRating: 4.8,
     sellerVerified: true,
-    imageUrl: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e"
+    imageUrl: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f"
   },
   {
     id: "2",
-    title: "iPhone Pro 15 - Next Model Reservation",
-    description: "Reserve the next iPhone at current prices. Redemption available during launch week.",
-    currentPrice: 1199.99,
-    guaranteedPrice: 999.99,
-    expiryDate: "2025-09-30",
-    category: "Electronics",
-    sellerName: "TechDirect",
-    sellerRating: 4.6,
+    title: "Farm-Fresh Egg Subscription",
+    description: "Secure 12 months of egg deliveries at today's prices. Protection against ongoing avian flu price impacts.",
+    currentPrice: 199.99,
+    guaranteedPrice: 149.99,
+    expiryDate: "2025-10-31",
+    category: "Dairy & Eggs",
+    sellerName: "Happy Hen Farms",
+    sellerRating: 4.7,
     sellerVerified: true,
-    imageUrl: "https://images.unsplash.com/photo-1523206489230-c012c64b2b48"
+    imageUrl: "https://images.unsplash.com/photo-1598965402089-897ce52e8355"
   },
   {
     id: "3",
-    title: "Home Cleaning Service - 6 Months",
-    description: "Lock in current rates for bi-weekly cleaning for the next 6 months.",
-    currentPrice: 149.99,
-    guaranteedPrice: 119.99,
+    title: "Premium Atlantic Salmon - Quarterly Delivery",
+    description: "Lock in salmon prices before new fishing quotas and import tariffs take effect. Wild-caught premium cuts.",
+    currentPrice: 329.99,
+    guaranteedPrice: 269.99,
     expiryDate: "2025-08-15",
-    category: "Services",
-    sellerName: "CleanCo",
-    sellerRating: 4.7,
+    category: "Seafood",
+    sellerName: "OceanFresh",
+    sellerRating: 4.9,
     sellerVerified: true,
-    imageUrl: "https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+    imageUrl: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2"
   },
   {
     id: "4",
-    title: "Winter Ski Resort Package",
-    description: "Book next winter's ski vacation at this season's prices. Full package includes lodging and lift tickets.",
-    currentPrice: 2499.99,
-    guaranteedPrice: 1799.99,
-    expiryDate: "2025-10-31",
-    category: "Travel",
-    sellerName: "Alpine Escapes",
-    sellerRating: 4.9,
+    title: "Organic Winter Vegetable Bundle",
+    description: "Pre-purchase next winter's local vegetable supply at current rates. Beat seasonal price fluctuations.",
+    currentPrice: 249.99,
+    guaranteedPrice: 199.99,
+    expiryDate: "2025-11-30",
+    category: "Produce",
+    sellerName: "Valley Organics",
+    sellerRating: 4.6,
     sellerVerified: true,
-    imageUrl: "https://images.unsplash.com/photo-1551524559-8af4e6624178"
+    imageUrl: "https://images.unsplash.com/photo-1610348725531-843dff563e2c"
   },
   {
     id: "5",
-    title: "Premium Coffee Subscription",
-    description: "6-month subscription of premium beans delivered monthly. Lock in before coffee prices increase.",
-    currentPrice: 169.99,
-    guaranteedPrice: 139.99,
+    title: "Imported Cheese Collection",
+    description: "Reserve European cheese selections before new dairy tariffs. Includes aged varieties from France, Italy, and Spain.",
+    currentPrice: 189.99,
+    guaranteedPrice: 149.99,
     expiryDate: "2025-07-01",
-    category: "Food & Drink",
-    sellerName: "Bean Masters",
+    category: "Dairy & Eggs",
+    sellerName: "World Cheese Emporium",
     sellerRating: 4.5,
     sellerVerified: false,
-    imageUrl: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+    imageUrl: "https://images.unsplash.com/photo-1452195100486-9cc805987862"
   },
   {
     id: "6",
-    title: "Landscaping Service Package",
-    description: "Spring lawn care package at winter prices. Includes 3 visits for mowing, trimming, and fertilizing.",
-    currentPrice: 349.99,
-    guaranteedPrice: 279.99,
-    expiryDate: "2025-02-28",
-    category: "Home & Garden",
-    sellerName: "GreenThumb Landscapes",
-    sellerRating: 4.4,
+    title: "Premium Ham & Cured Meat Package",
+    description: "Lock in specialty cured meats before pork tariff increases. Includes imported prosciutto and specialty hams.",
+    currentPrice: 299.99,
+    guaranteedPrice: 239.99,
+    expiryDate: "2025-09-15",
+    category: "Meat & Poultry",
+    sellerName: "Artisan Meats Co.",
+    sellerRating: 4.7,
     sellerVerified: true,
-    imageUrl: "https://images.unsplash.com/photo-1558904541-efa843a96f01"
+    imageUrl: "https://images.unsplash.com/photo-1599921841143-819065a55cc6"
   },
 ];
 
@@ -136,9 +137,11 @@ const FeaturedListings = () => {
         </div>
         
         <div className="mt-10 text-center">
-          <Button variant="outline" size="lg">
-            View All Listings
-          </Button>
+          <Link to="/listings">
+            <Button variant="outline" size="lg">
+              View All Listings
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
