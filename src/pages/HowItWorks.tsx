@@ -1,31 +1,30 @@
 
-import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import FeaturedListings from "@/components/FeaturedListings";
-import PaymentComparison from "@/components/PaymentComparison";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-const Index = () => {
+const HowItWorks = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
       {/* Hero Section */}
-      <Hero />
-      
-      {/* How It Works Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-pricelock-lightPurple via-white to-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">How PriceLock Works</h2>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Our platform connects buyers who want to secure future purchases at today's prices with sellers offering price guarantees.
-              Sellers can be retailers, distributors, or manufacturers looking to build customer loyalty and secure future sales.
+            <h1 className="text-4xl font-bold mb-4">How PriceLock Works</h1>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our platform connects savvy shoppers with sellers offering price guarantees on future purchases, 
+              protecting you from inflation, tariffs, and unexpected price increases.
             </p>
           </div>
-          
+        </div>
+      </section>
+      
+      {/* Process Steps */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             <div className="text-center">
               <div className="w-16 h-16 bg-pricelock-lightPurple rounded-full flex items-center justify-center mx-auto mb-4">
@@ -33,7 +32,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Browse Listings</h3>
               <p className="text-gray-600">
-                Search through offerings from verified sellers who guarantee their prices for future purchases.
+                Search through price-lock offerings from retailers, distributors, and manufacturers who guarantee their prices for future purchases.
               </p>
             </div>
             
@@ -43,7 +42,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-semibold mb-2">Connect With Sellers</h3>
               <p className="text-gray-600">
-                Reach out to sellers directly through our secure messaging system to discuss details.
+                Reach out to sellers directly through our secure messaging system to discuss details and finalize your agreement.
               </p>
             </div>
             
@@ -57,34 +56,22 @@ const Index = () => {
               </p>
             </div>
           </div>
-          
-          <div className="mt-12 text-center">
-            <Link to="/how-it-works">
-              <Button size="lg">Learn More</Button>
-            </Link>
-          </div>
         </div>
       </section>
       
-      {/* Payment Comparison Section */}
-      <PaymentComparison />
-      
-      {/* Featured Listings Section */}
-      <FeaturedListings />
-      
-      {/* Benefits Section */}
-      <section className="py-16 bg-white">
+      {/* For Sellers Section */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Why Use PriceLock?</h2>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Our platform offers unique advantages for both buyers and sellers looking to navigate uncertain markets.
+            <h2 className="text-3xl font-bold mb-4">For Sellers</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Whether you're a retailer, distributor, or manufacturer, PriceLock helps you secure future sales and build customer loyalty.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="border border-gray-200 rounded-xl p-6 hover:border-pricelock-purple hover:shadow-md transition">
-              <h3 className="text-xl font-semibold mb-4">For Buyers</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold mb-4">Who Can Sell on PriceLock?</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -92,7 +79,7 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Protect against future price increases, tariffs, and inflation</p>
+                  <p className="text-gray-600"><span className="font-semibold">Retailers</span> - Direct-to-consumer businesses looking to secure future sales</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -100,7 +87,7 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Secure deals on essential food items and products you know you'll need</p>
+                  <p className="text-gray-600"><span className="font-semibold">Distributors</span> - Wholesale businesses with imported goods sensitive to tariff changes</p>
                 </li>
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -108,21 +95,13 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Budget more effectively by locking in current prices for essential consumables</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
-                  <p className="text-gray-600">Find exclusive deals not available elsewhere</p>
+                  <p className="text-gray-600"><span className="font-semibold">Manufacturers</span> - Production companies looking to hedge against raw material price volatility</p>
                 </li>
               </ul>
             </div>
             
-            <div className="border border-gray-200 rounded-xl p-6 hover:border-pricelock-purple hover:shadow-md transition">
-              <h3 className="text-xl font-semibold mb-4">For Sellers</h3>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <h3 className="text-xl font-semibold mb-4">Benefits for Sellers</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
@@ -146,17 +125,51 @@ const Index = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                   </div>
-                  <p className="text-gray-600">Attract new customers seeking price certainty in volatile markets</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="flex-shrink-0 w-5 h-5 bg-pricelock-purple rounded-full flex items-center justify-center mr-3 mt-1">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
                   <p className="text-gray-600">Differentiate from competitors with unique offering</p>
                 </li>
               </ul>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/register">
+              <Button size="lg" className="bg-pricelock-purple hover:bg-pricelock-darkPurple">Become a Seller</Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* FAQ Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+          </div>
+          
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">How do price guarantees work?</h3>
+              <p className="text-gray-600">
+                Sellers offer a locked-in price for a specific product that can be redeemed during a set future timeframe. 
+                You pay now to secure that price, and redeem your purchase later according to the terms set by the seller.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">Is PriceLock a payment processor?</h3>
+              <p className="text-gray-600">
+                No, PriceLock simply connects buyers and sellers. We don't process payments or handle product deliveries. 
+                Those arrangements are made directly between you and the seller after connecting through our platform.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">How are sellers verified?</h3>
+              <p className="text-gray-600">
+                Sellers go through a basic verification process that checks their business credentials. 
+                Verified sellers display a badge on their listings. We recommend buyers do additional 
+                research before finalizing any transaction.
+              </p>
             </div>
           </div>
         </div>
@@ -166,17 +179,21 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-r from-pricelock-purple to-pricelock-darkPurple text-white">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Start Saving?</h2>
+            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="max-w-xl mx-auto mb-8">
               Join thousands of savvy shoppers and sellers who are already benefiting from price guarantees on essential consumables.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button size="lg" variant="default" className="bg-white text-pricelock-purple hover:bg-gray-100">
-                Browse Listings
-              </Button>
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
-                Create an Account
-              </Button>
+              <Link to="/listings">
+                <Button size="lg" variant="default" className="bg-white text-pricelock-purple hover:bg-gray-100">
+                  Browse Listings
+                </Button>
+              </Link>
+              <Link to="/register">
+                <Button size="lg" variant="outline" className="text-white border-white hover:bg-white/10">
+                  Create an Account
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -187,4 +204,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HowItWorks;
