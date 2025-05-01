@@ -40,9 +40,9 @@ const HowItWorks = () => {
               <div className="w-16 h-16 bg-pricelock-lightPurple rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-pricelock-purple text-xl font-bold">2</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Connect With Sellers</h3>
+              <h3 className="text-xl font-semibold mb-2">Place Your Order</h3>
               <p className="text-gray-600">
-                Reach out to sellers directly through our secure messaging system to discuss details and finalize your agreement.
+                Select the items you want to lock in at the guaranteed price and submit your order through our platform.
               </p>
             </div>
             
@@ -50,9 +50,9 @@ const HowItWorks = () => {
               <div className="w-16 h-16 bg-pricelock-lightPurple rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-pricelock-purple text-xl font-bold">3</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Complete Your Transaction</h3>
+              <h3 className="text-xl font-semibold mb-2">Connect With Sellers</h3>
               <p className="text-gray-600">
-                Finalize your price-lock agreement and redeem your purchase during the valid redemption period.
+                Once a seller accepts your order, we'll connect you directly via email to coordinate delivery and redemption details.
               </p>
             </div>
           </div>
@@ -131,6 +131,63 @@ const HowItWorks = () => {
             </div>
           </div>
           
+          {/* New Seller Workflow Section */}
+          <div className="bg-white p-8 rounded-xl shadow-sm mt-10 max-w-4xl mx-auto">
+            <h3 className="text-xl font-semibold mb-4">How Orders Work for Sellers</h3>
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-8 h-8 bg-pricelock-purple rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-white font-semibold">1</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Receive Customer Orders</h4>
+                  <p className="text-gray-600">
+                    When a customer places an order through the platform for your price-guaranteed items, we'll send you a notification with the order details.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-8 h-8 bg-pricelock-purple rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-white font-semibold">2</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Accept Orders</h4>
+                  <p className="text-gray-600">
+                    Review each order and choose whether to accept it based on your inventory and ability to fulfill.
+                    Click "Accept" on orders you wish to proceed with.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-8 h-8 bg-pricelock-purple rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-white font-semibold">3</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Pay Service Fee</h4>
+                  <p className="text-gray-600">
+                    After accepting an order, you'll be charged a small 2% service fee based on the order value.
+                    This fee helps maintain our platform and connect you with customers seeking price guarantees.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-8 h-8 bg-pricelock-purple rounded-full flex items-center justify-center mr-4 mt-1">
+                  <span className="text-white font-semibold">4</span>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-1">Connect With Customer</h4>
+                  <p className="text-gray-600">
+                    Once payment is processed, we'll connect you directly with the customer via email so you can coordinate
+                    delivery details, redemption timeframes, and fulfill the order according to your business processes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           <div className="text-center mt-12">
             <Link to="/register">
               <Button size="lg" className="bg-pricelock-purple hover:bg-pricelock-darkPurple">Become a Seller</Button>
@@ -151,14 +208,14 @@ const HowItWorks = () => {
               <h3 className="text-xl font-semibold mb-2">How do price guarantees work?</h3>
               <p className="text-gray-600">
                 Sellers offer a locked-in price for a specific product that can be redeemed during a set future timeframe. 
-                You pay now to secure that price, and redeem your purchase later according to the terms set by the seller.
+                You place an order on our platform, and once accepted by the seller, you'll be connected to complete the transaction directly.
               </p>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-2">Is PriceLock a payment processor?</h3>
               <p className="text-gray-600">
-                No, PriceLock simply connects buyers and sellers. We don't process payments or handle product deliveries. 
+                No, PriceLock simply connects buyers and sellers. We don't process payments between customers and sellers or handle product deliveries. 
                 Those arrangements are made directly between you and the seller after connecting through our platform.
               </p>
             </div>
