@@ -228,6 +228,15 @@ const HowItWorks = () => {
                 research before finalizing any transaction.
               </p>
             </div>
+            
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">How do you connect buyers and sellers?</h3>
+              <p className="text-gray-600">
+                We connect buyers and sellers directly via email after the seller accepts an order and pays the service fee. 
+                We do not provide a secure messaging system within our platform. All further communication and transaction details 
+                are handled through email between the parties.
+              </p>
+            </div>
           </div>
         </div>
       </section>
